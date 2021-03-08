@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Sample Twitter</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
+</head>
+<body>
+	<div class="content">
+		
+		<header>
+			<img class="header-back" src="{% static 'images/back.svg' %}" />
+			<h1>Reply</h1>
+			<button type="button" class="header-button">Reply</button>
+		</header>
+
+		<main>
+
+		<!-- Sample Tweet 1 -->
+		<div class="tweet">
+			<div class="tweet-icon">
+				<img src="images/post-default-icon.svg">
+			</div>
+			<div class="tweet-content">
+				<div class="tweet-name-area">
+					<span class="tweet-name">TECH I.S.</span>
+					<span class="tweet-created-at">10:30PM 10th May</span>
+				</div>
+				<p>I'll turn 21 tomorrow. <br>
+I don't really see any difference 🤷🏼‍♂️ plus the most fun you have on your birthday is when you're a kid. I used to love going to the waterpark Chot lagti thi firbhee maza aata tha ab toh bus cake katlo hogaya ji happy birthday.</p>
+			</div>
+		</div>
+
+		<!-- Post Tweet Form -->
+		<div class="tweet-form">
+
+			<div class="tweet-form-icon">
+				<img src="images/post-default-icon.svg">
+			</div>
+
+			<div class="tweet-form-content">
+				<p>Replying to this tweet</p>
+				
+				<input class="tweet-name" type="text" placeholder="Your post name" name="name">
+				
+				<textarea class="tweet-textarea" name="text" placeholder="What’s happenning?" rows="7" cols="100"></textarea>
+
+				<img class="tweet-form-image" src="{% static 'images/image.svg' %}" />
+			</div>
+		</div>
+
+		</main>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="twitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>post-tweet</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="27" cy="27" r="27"></circle>
+        <filter x="-13.0%" y="-9.3%" width="125.9%" height="125.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Twitter" transform="translate(-925.000000, -828.000000)">
+            <g id="Home" transform="translate(665.000000, 207.000000)">
+                <g id="post-tweet" transform="translate(264.000000, 623.000000)">
+                    <g id="Oval">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#1CA1F2" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="feather" transform="translate(16.000000, 17.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M22.4773026,0 C11.8501682,0 3.10907646,8.14584961 2.18281516,18.4979004 C3.94859724,16.0166504 6.11167049,13.6291504 8.81209388,10.884375 C9.01282222,10.678125 9.34527852,10.6739746 9.5512505,10.8770996 C9.75722247,11.078125 9.76035885,11.4083496 9.55855238,11.6135742 C9.15185207,12.0260742 8.73892801,12.4541992 8.32384769,12.8875488 C8.08651191,13.1344238 7.85441978,13.3802734 7.62654215,13.6219238 C7.58474008,13.6666992 7.54288901,13.7115234 7.50108694,13.7573242 C4.16397835,17.3177246 1.77822211,20.4166504 0.0458620797,24.265625 C-0.072291245,24.528125 0.0458620797,24.8364746 0.308288896,24.9541504 C0.378318386,24.9854004 0.450455132,25 0.522591878,25 C0.722291089,25 0.913610284,24.8854004 1.0003508,24.6927246 C1.61718858,23.3229492 2.33331241,22.0520996 3.13833301,20.815625 C10.4398262,20.6291504 17.085816,16.5822754 20.5693053,10.1427246 C20.6560948,9.98125 20.6518803,9.78647461 20.5577889,9.628125 C20.4626684,9.471875 20.2922257,9.375 20.1082574,9.375 L18.1720817,9.375 L21.6440546,7.39790039 C21.7538279,7.33540039 21.8385102,7.234375 21.8792831,7.115625 C22.6236344,4.959375 23,2.740625 23,0.520849609 C23,0.233349609 22.7658496,0 22.4773026,0 Z" id="Path"></path>
+                    </g>
+                    <text id="+" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="18" y="21">+</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

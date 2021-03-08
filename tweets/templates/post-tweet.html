@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Sample Twitter</title>
+	<link rel="icon" type="image/png" sizes="50x50" href="images/favicon.png">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
+</head>
+<body>
+   <div class="content">
+	   <form action="{% url 'process_form' %}"method="post"  enctype="multipart/form-data">
+		   {% csrf_token %}
+		   <header>
+			<img class="header-back" src="{% static 'images/back.svg' %}" />
+			<h1>Post Tweet</h1>
+			<button type="submit" class="header-button">Tweet</button>
+		  </header>
+		   <main>
+			   <!-- Post Tweet Form -->
+			   <div class="tweet-form">
+				   <div class="tweet-form-icon">
+					   <img src="{% static 'images/post-default-icon.svg' %}" />
+				   </div>
+				   <div class="tweet-form-content">
+          {% if parent_tweet_id is None %}
+          <input type="hidden" name="formtype" value="create" />
+          <input type="hidden" name="parent_tweet_id" value="" />
+          {% else %}
+          <input type="hidden" name="formtype" value="reply" />
+          <input
+            type="hidden"
+            name="parent_tweet_id"
+            value="{{parent_tweet_id}}"
+          />
+          {% endif %}
+          <input
+            class="tweet-name"
+            type="text"
+            placeholder="Your post name"
+            name="name"
+          />
+          <textarea
+            class="tweet-textarea"
+            name="comment"
+            placeholder="Whats happenning?"
+            rows="7"
+            cols="100"
+          ></textarea>
+					   <!--				<img class="tweet-form-image" src="{% static 'images/image.svg' %}" />-->
+					   <input type="file" id="tweet-image" name="tweet-image" />
+				   </div>
+			   </div>
+		   </main>
+	   </form>
+   </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script type="text/javascript" src="twitter.js"></script>
+</body>
+</html>

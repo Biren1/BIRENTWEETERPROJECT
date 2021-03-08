@@ -1,0 +1,71 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Sample Twitter</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
+</head>
+
+<body>
+	<div class="content">
+
+		<header>
+			<img class="header-icon" src="{% static 'images/post-default-icon.svg' %}" />
+			<a>Home</a>
+			<h1>Tweet</h1>
+		</header>
+
+		<main>
+
+			<!-- Sample Tweet 1 -->
+
+
+			<!-- Sample Tweet 2 -->
+			{% if not all_tweets %}
+			<h4> no tweets presents</h4>
+			{% else %}
+			{% for Tweet in all_tweets %}
+				{% if Tweet.parent_tweet_id is None %}
+					<div class="tweet">
+						<div class="tweet-icon">
+							<img src="{% static 'images/post-default-icon.svg' %}" />
+						</div>
+
+
+						<div class="tweet-content">
+							<div class="tweet-name-area">
+								<span class="tweet-name">{{Tweet.name}}</span>
+								<a href="{% url 'tweet_detail' Tweet.id %}"> {{Tweet.name}}</a>
+								<span class="tweet-created-at">{{Tweet.created_at}}</span>
+							</div>
+							<p>{{Tweet.text}}</p>
+							<img class="tweet-image" src="{% static Tweet.image_path %}" />
+							<div class="tweet-buttons">
+								<img class="tweet-reply" src="{% static 'images/comment.svg' %}" />
+								<div class="tweet-reply-count"><span>12</span></div>
+								<img class="tweet-like" src="{% static 'images/heart.svg' %}" />
+								<div class="tweet-like-count">22</div>
+							</div>
+						</div>
+					</div>
+
+		<div class="post-tweet-button">
+			<a href="{% url 'post-tweet' %}"><img src="{% static 'images/post-tweet.svg' %}" /></a>
+		</div>
+
+		{% endif %}
+			{% endfor %}
+			{% endif %}
+		</div>
+
+		</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="twitter.js"></script>
+
+</body>
+</html>
