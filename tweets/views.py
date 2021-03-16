@@ -76,11 +76,10 @@ def process_form(request):
      #Test if the file was uploaded
     if fileitem:
 
-           with open('tweets/static/userimage/' + str(fileitem), 'wb+') as destination:
+           with open('tweets/static/userimage' + str(fileitem), 'wb+') as destination:
                 for chunk in fileitem.chunks():
                     destination.write(chunk)
-           imageurl = '' \
-                      'userimage/' + str(fileitem)
+           imageurl =  'userimage' + str(fileitem)
     else:
          imageurl = None
          usrmsg = 'No file was uploaded'
@@ -105,7 +104,7 @@ def reply(request,parent_tweet_id):
         #      return render(request, '')
         # Test if the file was uploaded
         if fileitem:
-
+            print(fileitem)
             with open('tweets/static/userimage/' + str(fileitem), 'wb+') as destination:
                 for chunk in fileitem.chunks():
                     destination.write(chunk)

@@ -43,7 +43,7 @@
 								<span class="tweet-created-at">{{Tweet.created_at}}</span>
 							</div>
 							<p>{{Tweet.text}}</p>
-							<img class="tweet-image" src="{% static Tweet.image_path %}" />
+							<img class="tweet-image" src="/static/{{Tweet.image_path }}" />
 							<div class="tweet-buttons">
 								<img class="tweet-reply" src="{% static 'images/comment.svg' %}" />
 								<div class="tweet-reply-count"><span>12</span></div>
